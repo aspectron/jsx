@@ -1,0 +1,35 @@
+{
+    'targets': [
+        {
+            'target_name': 'zlib',
+            'type': 'static_library',
+            'msvs_guid': '644C7D7D-A8B1-44C6-9A19-CB2D46A0FFEC',
+            'direct_dependent_settings': {
+                'include_dirs': ['.'],
+            },
+            'sources': [
+                'adler32.c',
+                'compress.c',
+                'crc32.c',
+                'crc32.h',
+                'deflate.c',
+                'deflate.h',
+                'infback.c',
+                'inffast.c',
+                'inffast.h',
+                'inffixed.h',
+                'inflate.c',
+                'inflate.h',
+                'inftrees.c',
+                'inftrees.h',
+                'trees.c',
+                'trees.h',
+                'uncompr.c',
+                'zconf.h',
+                'zlib.h',
+                'zutil.c',
+                'zutil.h',
+            ],
+        },
+    ],
+}

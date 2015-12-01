@@ -1,0 +1,42 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Output directories
+/bin
+/doc
+
+# Visual Studio directories and files
+/ipch
+/obj
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.sdf
+*.opensdf
+
+# Python byte-code
+*.pyc
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+
+/Makefile
+/apps/*/Makefile
+/sdk/*/Makefile
+/extern/Makefile
+/extern/*/Makefile

@@ -1,0 +1,529 @@
+<!-- The value "N" listed in the descriptions is the shortcut parameter value. -->
+
+<!-- "N" values for Input Rows -->
+
+<!-- XD850 -->
+<!-- N == 0  : "Input1" -->
+<!-- N == 1  : "Input2" -->
+<!-- N == 2  : "Input3" -->
+<!-- N == 3  : "Input4" -->
+<!-- N == 4  : "Input5" -->
+<!-- N == 5  : "Input6" -->
+<!-- N == 6  : "Input7" -->
+<!-- N == 7  : "Input8" -->
+<!-- N == 8  : "Net" -->
+<!-- N == 9  : "Net2" -->
+<!-- N == 10 : "DDR" -->
+<!-- N == 11 : "DDR2" -->
+<!-- N == 12 : "Stills" -->
+<!-- N == 13 : "Titles" -->
+<!-- N == 15 : "Frame Buffer" -->
+<!-- N == 16 : "Black" -->
+<!-- N == 17 : "Virtual Input 1" -->
+<!-- N == 18 : "Virtual Input 2" -->
+<!-- N == 19 : "Virtual Input 3" -->
+<!-- N == 20 : "Virtual Input 4" -->
+<!-- N == 21 : "Virtual Input 5" -->
+<!-- N == 22 : "Virtual Input 6" -->
+<!-- N == 23 : "Virtual Input 7" -->
+<!-- N == 24 : "Virtual Input 8" -->
+
+<shortcuts>
+
+<!-- Transition Delegate Shortcuts -->
+<category name="Transition Delegate">
+  
+  <shortcut name="transition_delegate" shortcut_type="string" state_type="string" />   <!-- Select Transition Delegate.  --> 
+                                                          <!-- Options: "background", "overlay0", "overlay1", "ftb". -->
+                                                          <!-- May be piped for multi-select: "background|overlay1" -->
+  <shortcut name="transition_delegate_flags" shortcut_type="int" state_type="int" /> <!-- Select Delegate using Base 2 flags. -->
+                                                                                <!-- N == 2^0 selects the first option.  -->
+
+  <group>
+    <prefix name="transition" />
+    <prefix name="background" />
+    <prefix name="overlay0" />
+    <prefix name="overlay1" />
+    <prefix name="ftb" />
+
+    <prefix name="v1_overlay" />
+    <prefix name="v2_overlay" />
+    <prefix name="v3_overlay" />
+    <prefix name="v4_overlay" />
+    <prefix name="v5_overlay" />
+    <prefix name="v6_overlay" />
+    <prefix name="v7_overlay" />
+    <prefix name="v8_overlay" />
+
+    <suffix name="_auto" shortcut_type="void" state_type="bool"  /> <!-- Trigger an auto.  The bool value is only used in the state, to light the auto button  -->
+    <suffix name="_reversed_auto" shortcut_type="void" />  <!-- Trigger a reversed auto. -->
+    <suffix name="_take" shortcut_type="void" state_type="bool" /> <!-- Trigger a take.  The bool value is only used in the state, to light the take button  -->
+    <suffix name="_up" shortcut_type="void" /> <!-- Step the transition up -->
+    <suffix name="_down" shortcut_type="void" /> <!-- Step the transition up -->
+    <suffix name="_up_fast" shortcut_type="void" /> <!-- Step the transition up a lot -->
+    <suffix name="_down_fast" shortcut_type="void" /> <!-- Step the transition up a lot -->
+    <suffix name="_goto_halfway" shortcut_type="void" /> <!-- Move the transition to the halfway point -->
+    <suffix name="_goto_top" shortcut_type="void" /> <!-- Move the transition to the halfway point -->
+    <suffix name="_value" shortcut_type="double" state_type="double" /> <!-- Set the TBar location value.  Used by control surface. -->
+    <suffix name="_toggle_reverse" shortcut_type="void" /> 
+    <suffix name="_toggle_autoreverse" shortcut_type="void" />
+    <suffix name="_select_index" shortcut_type="int" state_type="int" /> <!-- Select Transition Preset N. -->
+    <suffix name="_select_next" shortcut_type="void" /> 
+    <suffix name="_select_prev" shortcut_type="void" /> 
+    <suffix name="_select_fade" shortcut_type="void" />
+    <suffix name="_slow" shortcut_type="void" /> 
+    <suffix name="_medium" shortcut_type="void" />
+    <suffix name="_fast" shortcut_type="void" />
+    <suffix name="_speed_next_preset" shortcut_type="void" /> <!-- Select the next S, M, or F preset -->
+    <suffix name="_adjust_speed" shortcut_type="double" state_type="double" />  <!-- Change the Transition speed by N seconds. -->
+    <suffix name="_switch_transition" shortcut_type="int" /> <!-- 1 for next transition.  -1 for previous transition. -->
+    <suffix name="_select_saved_nonfade_transition" shortcut_type="void"/>
+    <suffix name="_show_on_preview" shortcut_type="string" /> <!-- Used Internally to show layers on preview conditionally.  Accepted values are "alpha", "true", "false" -->
+    <suffix name="_direction" state_type="int" />
+  </group>
+</category>
+  
+<!-- Media Bin Delegate Shortcuts -->
+<category name="Media Bin">
+  <shortcut name="media_delegate" shortcut_type="string" state_type="string" />   <!-- Select Transition Delegate.  --> 
+                                        <!-- Options: "ddr", "stills", "titles", "ddr2". "sound" -->
+                                        <!-- May be piped for multi-select: "ddr|ddr2" -->
+  <shortcut name="media_delegate_flags" shortcut_type="int" state_type="int" /> <!-- Select Delegate using Base 2 flags. 2^0 is the first option.  -->
+
+  <group>
+    <prefix name="media" />
+    <prefix name="ddr" />
+    <prefix name="stills" />
+    <prefix name="titles" />
+    <prefix name="ddr2" />
+    <prefix name="sound" />
+
+    <suffix name="_playspeed" shortcut_type="int" state_type="int" /> <!-- Speed in % of normal.  Valid values 25-400 -->
+    <suffix name="_play" shortcut_type="void" state_type="bool" /> 
+	<suffix name="_play_toggle" shortcut_type="void" />
+	<suffix name="_stop" shortcut_type="void" state_type="bool" />
+    <suffix name="_back" shortcut_type="void" />
+    <suffix name="_forward" shortcut_type="void" />
+    <suffix name="_select_clip" shortcut_type="int" /> <!-- Selects clip N in the current preset -->
+    <suffix name="_select_preset" shortcut_type="int" /> <!-- Selects preset N -->
+    <suffix name="_remove_currently_selected_clips" shortcut_type="void" />
+    <suffix name="_relative_time" shortcut_type="double" /> <!-- Scrubs N seconds from the current position. -->
+    <suffix name="_relative_frame" shortcut_type="int" /> <!-- Scrubs N frames from the current position. -->
+    <suffix name="_single_mode_toggle" shortcut_type="void" state_type="bool" /> <!-- Overloaded as shortcut_type="bool" -->
+    <suffix name="_loop_mode_toggle" shortcut_type="void" state_type="bool" /> <!-- Overloaded as shortcut_type="bool" -->
+    <suffix name="_autoplay_mode_toggle" shortcut_type="void" state_type="bool" /> <!-- Overloaded as shortcut_type="bool" -->
+    <suffix name="_next_preset" shortcut_type="void" />
+    <suffix name="_previous_preset" shortcut_type="void" />
+    <suffix name="_shuttle" shortcut_type="int" /> <!-- Valid speed values -1600 through 1600.  0 stops shuttling.  -->
+    <suffix name="_scrub_to_time_from_beginning" shortcut_type="double" /> <!-- Scrubs N seconds from the beginning of clip. -->
+    <suffix name="_scrub_to_time_from_end" shortcut_type="double" /> <!-- Scrubs N seconds from the end of clip. -->
+    <suffix name="_mark_in" shortcut_type="void" /> <!-- Marks the current position as the clip's in-point -->
+    <suffix name="_mark_out" shortcut_type="void" /> <!-- Marks the current position as the clip's out-point -->
+    <suffix name="_copy_selected" shortcut_type="void" /> <!-- Copy selected clip to clipboard -->
+    <suffix name="_paste_selected" shortcut_type="void" /> <!-- Paste from clipboard to current position -->
+  </group>
+</category>
+  
+<!-- Positioning Shortcuts -->
+<category name="Positioning">
+  <group>
+    <prefix name="overlay0" />
+    <prefix name="overlay1" />
+    <prefix name="virtualinputs_a" />
+    <prefix name="virtualinputs_b" />
+    <prefix name="virtualinputs_overlay" />
+    <prefix name="v1_a" />
+    <prefix name="v1_b" />
+    <prefix name="v1_overlay" />
+    <prefix name="v2_a" />
+    <prefix name="v2_b" />
+    <prefix name="v2_overlay" />
+    <prefix name="v3_a" />
+    <prefix name="v3_b" />
+    <prefix name="v3_overlay" />
+    <prefix name="v4_a" />
+    <prefix name="v4_b" />
+    <prefix name="v4_overlay" />
+    <prefix name="v5_a" />
+    <prefix name="v5_b" />
+    <prefix name="v5_overlay" />
+    <prefix name="v6_a" />
+    <prefix name="v6_b" />
+    <prefix name="v6_overlay" />
+    <prefix name="v7_a" />
+    <prefix name="v7_b" />
+    <prefix name="v7_overlay" />
+    <prefix name="v8_a" />
+    <prefix name="v8_b" />
+    <prefix name="v8_overlay" />
+    <prefix name="background" />
+
+
+    <suffix name="_position_x" shortcut_type="double" /> <!-- Positions the layer to N on the X Axis. -->
+                                                <!-- Valid values: -500 to 500.  0 is Origin. -->
+    <suffix name="_position_y" shortcut_type="double" /> <!-- Positions the layer to N on the Y Axis. -->
+                                                <!-- Valid values: -500 to 500.  0 is Origin. -->
+    <suffix name="_position_x_delta_value" shortcut_type="double" /> <!-- Translates the layer by N on the X Axis. -->
+    <suffix name="_position_y_delta_value" shortcut_type="double" /> <!-- Translates the layer by N on the X Axis. -->
+    <suffix name="_position_reset" shortcut_type="void" /> <!-- Resets all position, rotation, and crop values to origin.  Excludes Crop. -->
+    <suffix name="_scale_x" shortcut_type="double" /> <!-- Changes the Scale X value to N. Valid values: -500 to 500.  100 is Origin. -->
+    <suffix name="_scale_y" shortcut_type="double" /> <!-- Changes the Scale Y value to N. Valid values: -500 to 500.  100 is Origin. -->
+    <suffix name="_scale_x_delta_value" shortcut_type="double" /> <!-- Changes the Scale X value by N. -->
+    <suffix name="_scale_y_delta_value" shortcut_type="double" /> <!-- Changes the Scale Y value by N. -->
+    <suffix name="_scale_delta_value" shortcut_type="double" /> <!-- Changes the Scale X & Scale Y values by N. -->
+    <suffix name="_scale_reset" shortcut_type="void" /> <!-- Resets all scale values to origin.  -->
+    <suffix name="_rotation_x" shortcut_type="double" /> <!-- Changes the Rotate X value to N. Valid Values -360 to 360. -->
+    <suffix name="_rotation_y" shortcut_type="double" /> <!-- Changes the Rotate Y value to N. Valid Values -360 to 360. -->
+    <suffix name="_rotation_z" shortcut_type="double" /> <!-- Changes the Rotate Z value to N. Valid Values -360 to 360. -->
+    <suffix name="_rotation_x_delta_value" shortcut_type="double" /> <!-- Changes the Rotate X value by N. -->
+    <suffix name="_rotation_y_delta_value" shortcut_type="double" /> <!-- Changes the Rotate Y value by N. -->
+    <suffix name="_rotation_z_delta_value" shortcut_type="double" /> <!-- Changes the Rotate Z value by N. -->
+    <suffix name="_rotation_reset" shortcut_type="void" /> <!-- Resets all rotate values to origin.  -->
+    <suffix name="_left_delta_value" shortcut_type="double" /> <!-- Changes the Crop Left Value by N. -->
+    <suffix name="_right_delta_value" shortcut_type="double" /> <!-- Changes the Crop Right Value by N. -->
+    <suffix name="_up_delta_value" shortcut_type="double" /> <!-- Changes the Crop Up Value by N. -->
+    <suffix name="_down_delta_value" shortcut_type="double" /> <!-- Changes the Crop Down Value by N. -->
+    <suffix name="_all_delta_value" shortcut_type="double" /> <!-- Changes all Crop Values by N. -->
+    <suffix name="_crop_reset" shortcut_type="void" /> <!-- Resets all crop values to origin.  (Origin is 0.) -->
+  </group>
+</category>
+  
+<!-- Select Virtual Input Delegate -->
+<category name="Select Virtual Input">
+  <shortcut name="virtualinputs_delegate" shortcut_type="string" state_type="string" />    <!-- Options: "v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8". May be piped for multi-select: "v1|v3" -->
+
+  <shortcut name="virtualinputs_delegate_flags" shortcut_type="int" state_type="int" /> <!-- Select Delegate using Base 2 flags. 2^0 is the first option.  -->
+
+  <shortcut name="virtualinputs_follow_preview" shortcut_type="bool" state_type="bool" />
+</category>
+<!-- Virtual Input Delegate Shortcuts -->
+
+<category name="Virtual Inputs">
+  <group>
+    <prefix name="virtualinputs" />
+    <prefix name="v1" />
+    <prefix name="v2" />
+    <prefix name="v3" />
+    <prefix name="v4" />
+    <prefix name="v5" />
+    <prefix name="v6" />
+    <prefix name="v7" />
+    <prefix name="v8" />
+
+    <suffix name="_a_row" shortcut_type="int" state_type="int" /> <!-- Select source on A row.  Valid values 0 through Number of Sources -->
+    <suffix name="_b_row" shortcut_type="int" state_type="int" /> <!-- Select source on B row.  Valid values 0 through Number of Sources -->
+    <suffix name="_overlay_row" shortcut_type="int" state_type="int" />  <!-- Select source on Overlay row.  Valid values 0 through Number of Sources -->
+    <suffix name="_overlay_take" shortcut_type="void" state_type="bool" />
+    <suffix name="_overlay_auto" shortcut_type="void" state_type="bool" />
+    <suffix name="_overlay_switch_transition" shortcut_type="int" /> <!-- 1 for next transition.  -1 for previous transition. -->
+    <suffix name="_overlay_adjust_speed" shortcut_type="double" state_type="double" /> <!-- Change the Transition speed by N seconds. -->
+    <suffix name="_overlay_speed_next_preset" shortcut_type="void" /> <!-- Select the next S, M, or F preset -->
+    <suffix name="_zoom_speed_next_preset" shortcut_type="void" /> <!-- Select the next zoom speed S, M, or F preset -->
+    <suffix name="_adjust_zoom" shortcut_type="double" /> <!-- Adjust the Animated Zoom speed by N seconds -->
+    <suffix name="_toggle_animate_zoom" shortcut_type="void" state_type="bool" /> <!-- Overloaded as shortcut_type="bool" -->
+    <suffix name="_select_zoom_preset" shortcut_type="int" /> <!-- Valid values 0-4 -->
+    <suffix name="_zoom_speed_value" shortcut_type="double" /> <!-- Performs a zoom by setting the current zoom speed.   -->
+                                                      <!-- Valid values are between -1.0 and 1.0 -->
+  </group>
+</category>
+  
+<!-- VI PresetDock Presets -->
+<category name="Virtual Input Presets">
+  <shortcut name="v1_select_dockpreset" shortcut_type="int" />
+  <shortcut name="v2_select_dockpreset" shortcut_type="int" />
+  <shortcut name="v3_select_dockpreset" shortcut_type="int" />
+  <shortcut name="v4_select_dockpreset" shortcut_type="int" />
+  <shortcut name="v5_select_dockpreset" shortcut_type="int" />
+  <shortcut name="v6_select_dockpreset" shortcut_type="int" />
+  <shortcut name="v7_select_dockpreset" shortcut_type="int" />
+  <shortcut name="v8_select_dockpreset" shortcut_type="int" />
+</category>
+  
+<!-- Aux Delegate Buttons -->
+<category name="Aux Buttons">
+  <shortcut name="auxbus_delegate" shortcut_type="string" state_type="string"/>
+  <shortcut name="auxbus_delegate_flags" shortcut_type="int" state_type="int" />
+
+  <shortcut name="auxbus_select" shortcut_type="int" state_type="int" />
+
+  <shortcut name="overlay0_select" shortcut_type="int" state_type="int" />
+  <shortcut name="overlay1_select" shortcut_type="int" state_type="int" />
+  <shortcut name="fx_select" shortcut_type="int" state_type="int" />
+  <shortcut name="auxout_select" shortcut_type="int" state_type="int" />
+
+  <!-- For Macros, not used by keyboard or surface -->
+  <shortcut name="audiomixer_select_preset" shortcut_type="int" />
+</category>
+  
+<!-- Recording -->
+<category name="Recording">
+  <shortcut name="grab_still" shortcut_type="void" />
+  <!-- toggle normal recording, can be supplied w/ N == 1 or N == 0 to set record state directly-->
+  <!-- the UI may or bit 1 to signal to blink the shift key (i.e. N == 3 for "on and blinking") -->
+  <shortcut name="record_toggle" shortcut_type="int" state_type="int"/>
+  <shortcut name="record_start" shortcut_type="void" />
+  <shortcut name="record_stop" shortcut_type="void" />
+
+   <!--Use N == 0 to select DDR1, or N == 1 to select DDR 2 -->
+	<shortcut name="record_reset" shortcut_type="int" />	<!-- always perform a record start/reset. 0 for DDR1, 1 for DDR2-->
+	<shortcut name="record_filtered_reset" shortcut_type="int" /><!-- perform a record start/reset conditionally on ui.  0 for DDR1, 1 for DDR2 -->
+  <shortcut name="record_chop" shortcut_type="int" /><!-- always perform a record chop.  0 for DDR1, 1 for DDR2 -->
+  <shortcut name="record_filtered_chop" shortcut_type="int" /><!-- perform a record chop conditionally on ui settings.  0 for DDR1, 1 for DDR2 shortcut_type-->
+	
+  <shortcut name="streaming_toggle" shortcut_type="int" /> <!--Same rules apply as in record_toggle.  N == 1 for enabled. -->
+  <shortcut name="show_clean_output_on_preview" shortcut_type="bool" />
+
+  <!-- Use N == -1 and N == 1 to cycle through sources -->
+	<shortcut name="overlay0_switch_source" shortcut_type="int" />
+  <shortcut name="overlay1_switch_source" shortcut_type="int" /> <!-- Use -1 and 1 to cycle through sources -->
+
+  <!-- Sets the program and preview rows.  N == 0 for input 1. -->
+  <shortcut name="switcher_pgm" shortcut_type="int" state_type="int" />
+  <shortcut name="switcher_prev" shortcut_type="int" state_type="int" />
+
+  <!-- switcher_begin_changes intercepts all messages to the switcher until switcher_finish_and_send_changes is sent -->
+  <!-- Allows 'batching' of switcher commands.  -->
+  <shortcut name="switcher_begin_changes" shortcut_type="void" />
+  <shortcut name="switcher_finish_and_send_changes" shortcut_type="void" />
+
+  <shortcut name="switcher_virtual_input_pgm_zoom_speed_value" shortcut_type="double" />
+  <shortcut name="switcher_virtual_input_prev_zoom_speed_value" shortcut_type="double" />
+
+  <!-- Sets a livematte or procamp state for all inputs at once using binary flags. -->
+  <!-- Ex: N & 2^0 turns Input 1 procamp/livematte on/off.  -->
+  <!-- N & 2^13 turns titles procamp/livematte on/off --> 
+  <!-- N == 8193 (or 2^0 + 2^13) sets procamp/livematte on for Input 1 and Titles only.  -->
+  <shortcut name="switcher_toggle_livematte_flags" shortcut_type="int" state_type="int" />
+  <shortcut name="switcher_toggle_procamp_flags" shortcut_type="int" state_type="int" />
+</category>
+  
+  <!-- Audiomixer Shortcuts for input/output/master -->
+<category name="Audio Mixer">
+  <group>
+    <prefix name="input1" />
+    <prefix name="input2" />
+    <prefix name="input3" />
+    <prefix name="input4" />
+    <prefix name="input5" />
+    <prefix name="input6" />
+    <prefix name="input7" />
+    <prefix name="input8" />
+    <prefix name="ddr" />
+    <prefix name="ddr2" />
+    <prefix name="music" />
+    <prefix name="transition" />
+    <prefix name="outputaux" />
+    <prefix name="outputstream" />
+    <prefix name="master" />
+
+    <suffix name="_adjust_volume" shortcut_type="double" state_type="double" /> <!-- Adjusts volume of the input/output/master by N db.  State contains current volume. -->
+    <suffix name="_adjust_balance" shortcut_type="double" state_type="double" /> <!-- Adjusts balance of the input/output/master by N db.  State contains current balance. -->
+    <suffix name="_mute" shortcut_type="bool" state_type="bool" />  <!-- Turns input/output/master Mute On/Off -->
+
+  </group>
+</category>
+  
+  <!-- Audiomixer Shortcuts for inputs only -->
+<category name="Audio Mixer Inputs">
+  <group>
+    <prefix name="input1" />
+    <prefix name="input2" />
+    <prefix name="input3" />
+    <prefix name="input4" />
+    <prefix name="input5" />
+    <prefix name="input6" />
+    <prefix name="input7" />
+    <prefix name="input8" />
+    <prefix name="ddr" />
+    <prefix name="ddr2" />
+    <prefix name="music" />
+    <prefix name="transition" />
+
+    <suffix name="_mic1_adjust_volume" shortcut_type="double" state_type="double" /> <!-- Adjusts volume of the input mic1 by N db.  State contains current volume. -->
+    <suffix name="_mic2_adjust_volume" shortcut_type="double" state_type="double" /> <!-- Adjusts volume of the input mic2 by N db.  State contains current volume. -->
+    <suffix name="_mic1_mute" shortcut_type="bool" state_type="bool" /> <!-- Turns Mic1 Mute On/Off -->
+    <suffix name="_mic2_mute" shortcut_type="bool" state_type="bool" /> <!-- Turns Mic2 Mute On/Off -->
+    <suffix name="_mic1_adjust_balance" shortcut_type="double" state_type="double" /> <!-- Adjusts balance of the input mic1 by N db.  State contains current balance. -->
+    <suffix name="_mic2_adjust_balance" shortcut_type="double" state_type="double" /> <!-- Adjusts balance of the input mic2 by N db.  State contains current balance. -->
+    <suffix name="_mic1_adjust_trim" shortcut_type="double" state_type="double" /> <!-- Adjusts trim of the input mic1 by N db.  State contains current trim. -->
+    <suffix name="_mic2_adjust_trim" shortcut_type="double" state_type="double" /> <!-- Adjusts trim of the input mic2 by N db.  State contains current trim. -->
+    <suffix name="_input_type" shortcut_type="string" state_type="string" /> <!-- options: mic, mic_and_phantom, line, aes3, sdi_embedded, line_quad -->
+    <suffix name="_follow" shortcut_type="bool" state_type="bool" /> <!-- Turns input Follow On/Off -->
+    <suffix name="_mono" shortcut_type="bool" state_type="bool" />  <!-- Turns input Mono On/Off -->
+    <suffix name="_solo" shortcut_type="bool" state_type="bool" />  <!-- Turns input Solo On/Off -->
+    <suffix name="_talk" shortcut_type="bool" state_type="bool" />  <!-- Turns input Talk On/Off -->
+
+    <!-- Currently Unimplemented -->
+    <suffix name="_color_group" shortcut_type="int" state_type="int" />
+  </group>
+</category>
+
+<category name="Audio Mixer Phones">
+  <shortcut name="phones_adjust_volume" shortcut_type="double" state_type="double" />
+</category>
+
+
+  <!-- ============== Mason-Dixon-Documentation Line, or MDD Line =============  -->
+  <!-- ============== All shortcuts above this line are documented ============= -->
+  <!-- ============== All shortcuts below this line are undocumented (internal use, surface specific) ============= -->
+
+<category name="General">
+<!-- Production "8 in 1" shortcuts -->
+  <shortcut name="inputs_change_connection_type" shortcut_type="void" /> <!-- Must be sent with keyboard shortcut -->
+  <shortcut name="audioinputs_change_mode" shortcut_type="void" />  <!-- Must be sent with keyboard shortcut -->
+
+
+<!-- Shatner Connected -->
+  <shortcut name="shatner_connected" state_type="bool" />
+<!-- Shatner State -->
+
+<!-- Shatner Delegates -->
+  <shortcut name="shatner_delegate" shortcut_type="string" state_type="string" />
+  <shortcut name="shatner_delegate_flags" shortcut_type="int" state_type="int" />
+
+  <shortcut name="shatner_playspeed" shortcut_type="int" state_type="int" />
+  <shortcut name="shatner_play" shortcut_type="void" state_type="bool" />
+  <shortcut name="shatner_stop" shortcut_type="void" state_type="bool" />
+  <shortcut name="shatner_back" shortcut_type="void" />
+  <shortcut name="shatner_forward" shortcut_type="void" />
+  <shortcut name="shatner_relative_frame" shortcut_type="int" />
+  <shortcut name="shatner_select_preset" shortcut_type="int" />
+  <shortcut name="shatner_loop_mode_toggle" shortcut_type="void" state_type="bool" />
+  <shortcut name="shatner_single_mode_toggle" shortcut_type="void" state_type="bool" />
+  <shortcut name="shatner_autoplay_mode_toggle" shortcut_type="void" state_type="bool" />
+  <shortcut name="shatner_mark_in" shortcut_type="void" />
+  <shortcut name="shatner_mark_out" shortcut_type="void" />
+  <shortcut name="shatner_remove_currently_selected_clips" shortcut_type="void" />
+  <shortcut name="shatner_copy_selected" shortcut_type="void" />
+  <shortcut name="shatner_paste_selected" shortcut_type="void" />
+
+
+<!-- Timewarp Connected -->
+  <shortcut name="timewarp_connected" state_type="bool" /> <!-- Timewarp State -->
+
+<!-- Timewarp Delegates -->
+  <shortcut name="timewarp_delegate" shortcut_type="string" state_type="string" />
+  <shortcut name="timewarp_delegate_flags" shortcut_type="int" state_type="int" />
+
+  <shortcut name="timewarp_playspeed" shortcut_type="int" state_type="int" />
+  <shortcut name="timewarp_play" shortcut_type="void" state_type="bool" />
+  <shortcut name="timewarp_stop" shortcut_type="void" state_type="bool" />
+  <shortcut name="timewarp_back" shortcut_type="void" />
+  <shortcut name="timewarp_forward" shortcut_type="void" />
+  <shortcut name="timewarp_relative_time" shortcut_type="double" />
+  <shortcut name="timewarp_relative_frame" shortcut_type="long" />
+  <shortcut name="timewarp_single_mode_toggle" shortcut_type="void" state_type="bool" />
+  <shortcut name="timewarp_shuttle" shortcut_type="int" />
+  <shortcut name="timewarp_scrub_to_time_from_beginning" shortcut_type="double"  />
+  <shortcut name="timewarp_scrub_to_time_from_end" shortcut_type="double"  />
+  <shortcut name="timewarp_reset" shortcut_type="int" />	<!-- always perform a record start/reset-->
+  <shortcut name="timewarp_filtered_reset" shortcut_type="int" />	<!-- perform a record start/reset conditionally on ui -->
+  <shortcut name="timewarp_chop" shortcut_type="int" />	<!-- always perform a record chop-->
+  <shortcut name="timewarp_filtered_chop" shortcut_type="int" />	<!-- perform a record chop conditionally on ui settings-->
+  <shortcut name="timewarp_remove_currently_selected_clips" shortcut_type="void" />
+
+	
+	<!-- Joystick Mode Delegates -->
+  <shortcut name="joystickmode_delegate" shortcut_type="string" state_type="string" />
+  <shortcut name="joystickmode_delegate_flags" shortcut_type="int" state_type="int" />
+
+  <shortcut name="joystickmode_x" shortcut_type="int" />
+  <shortcut name="joystickmode_y" shortcut_type="int" />
+  <shortcut name="joystickmode_z" shortcut_type="int" />
+  <shortcut name="joystickmode_x_alt" shortcut_type="int" />
+  <shortcut name="joystickmode_y_alt" shortcut_type="int" />
+  <shortcut name="joystickmode_reset" shortcut_type="void" />
+  <shortcut name="joystick_reset_vectors" shortcut_type="void" />
+  <shortcut name="joysticklc11_0_reset_vectors" shortcut_type="void" />
+  <shortcut name="joysticklc11_1_reset_vectors" shortcut_type="void" />
+
+	<!-- Joystick Delegates -->
+  <shortcut name="joystick_delegate" shortcut_type="string" state_type="string" />
+  <shortcut name="joystick_delegate_flags" shortcut_type="int" state_type="int" />
+
+  <shortcut name="joystick_position_x" shortcut_type="int" />
+  <shortcut name="joystick_position_y" shortcut_type="int" />
+  <shortcut name="joystick_position_z" shortcut_type="int" />
+  <shortcut name="joystick_rotation_x" shortcut_type="int" />
+  <shortcut name="joystick_rotation_y" shortcut_type="int" />
+  <shortcut name="joystick_rotation_z" shortcut_type="int" />
+  <shortcut name="joystick_crop_x" shortcut_type="int" />
+  <shortcut name="joystick_crop_y" shortcut_type="int" />
+  <shortcut name="joystick_crop_z" shortcut_type="int" />
+  <shortcut name="joystick_crop_x_alt" shortcut_type="int" />
+  <shortcut name="joystick_crop_y_alt" shortcut_type="int" />
+  <shortcut name="joystick_crop_z_alt" shortcut_type="int" />
+  <shortcut name="joystick_rotation_reset" shortcut_type="void" />
+  <shortcut name="joystick_position_reset" shortcut_type="void" />
+  <shortcut name="joystick_crop_reset" shortcut_type="void" />
+  <shortcut name="joystick_reset_positioning" shortcut_type="void" />
+
+<!-- LC11 Joystick Shortcuts -->
+  <shortcut name="joysticklc11_position_0_x" shortcut_type="int" />
+  <shortcut name="joysticklc11_position_0_y" shortcut_type="int" />
+  <shortcut name="joysticklc11_position_0_z" shortcut_type="int" />
+  <shortcut name="joysticklc11_scale_0_x" shortcut_type="int" />
+  <shortcut name="joysticklc11_scale_0_y" shortcut_type="int" />
+  <shortcut name="joysticklc11_position_1_x" shortcut_type="int" />
+  <shortcut name="joysticklc11_position_1_y" shortcut_type="int" />
+  <shortcut name="joysticklc11_position_1_z" shortcut_type="int" />
+  <shortcut name="joysticklc11_scale_1_x" shortcut_type="int" />
+  <shortcut name="joysticklc11_scale_1_y" shortcut_type="int" />
+  <shortcut name="joysticklc11_0_virtual_zoom" shortcut_type="int" />
+  <shortcut name="joysticklc11_1_virtual_zoom" shortcut_type="int" />
+  <shortcut name="joysticklc11_0_virtual_zoom" shortcut_type="int" />
+  <shortcut name="joysticklc11_1_virtual_zoom" shortcut_type="int" />
+
+
+<!-- Virtual Inputs  -->
+
+<!-- VI Zoom Presets -->
+  <shortcut name="virtualinput_program_preset0" shortcut_type="void" />
+  <shortcut name="virtualinput_program_preset1" shortcut_type="void" />
+  <shortcut name="virtualinput_program_preset2" shortcut_type="void" />
+  <shortcut name="virtualinput_program_preset3" shortcut_type="void" />
+  <shortcut name="virtualinput_preview_preset0" shortcut_type="void" />
+  <shortcut name="virtualinput_preview_preset1" shortcut_type="void" />
+  <shortcut name="virtualinput_preview_preset2" shortcut_type="void" />
+  <shortcut name="virtualinput_preview_preset3" shortcut_type="void" />
+
+
+<!-- UI Control Shortcuts -->
+  <shortcut name="vga_combo_00" shortcut_type="void" />
+  <shortcut name="vga_combo_01" shortcut_type="void" />
+  <shortcut name="vga_combo_02" shortcut_type="void" />
+  <shortcut name="vga_combo_03" shortcut_type="void" />
+  <shortcut name="vga_combo_04" shortcut_type="void" />
+  <shortcut name="vga_combo_05" shortcut_type="void" />
+  <shortcut name="vga_combo_06" shortcut_type="void" />
+  <shortcut name="vga_combo_07" shortcut_type="void" />
+
+  <shortcut name="show_ddr_tab" shortcut_type="void" />
+  <shortcut name="show_ddr2_tab" shortcut_type="void" />
+  <shortcut name="show_stills_tab" shortcut_type="void" />
+  <shortcut name="show_titles_tab" shortcut_type="void" />
+  <shortcut name="show_sound_tab" shortcut_type="void" />
+  <shortcut name="show_audiomixer" shortcut_type="void" />
+  <shortcut name="show_v1_tab" shortcut_type="void" />
+  <shortcut name="show_v2_tab" shortcut_type="void" />
+  <shortcut name="show_v3_tab" shortcut_type="void" />
+  <shortcut name="show_v4_tab" shortcut_type="void" />
+  <shortcut name="show_v5_tab" shortcut_type="void" />
+  <shortcut name="show_v6_tab" shortcut_type="void" />
+  <shortcut name="show_v7_tab" shortcut_type="void" />
+  <shortcut name="show_v8_tab" shortcut_type="void" />
+  <shortcut name="show_external_audiomixer" shortcut_type="void" />
+  <shortcut name="show_internal_audiomixer" shortcut_type="void" />
+
+
+<!-- Surface Interface Shortcuts -->
+  <shortcut name="surface_connected" shortcut_type="void" />
+  <shortcut name="surface_disconnected" shortcut_type="void" />
+
+  <shortcut name="tbar_light_top" state_type="void" />
+  <shortcut name="tbar_light_bottom" state_type="void" />
+  <shortcut name="blink_tbar_light_top" state_type="void" />
+  <shortcut name="blink_tbar_light_bottom" state_type="void" />
+</category>
+  
+</shortcuts>

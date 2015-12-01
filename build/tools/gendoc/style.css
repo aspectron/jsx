@@ -1,0 +1,28 @@
+body
+{
+  margin: 0.5em;
+}
+
+a:hover, a:focus { text-decoration: none; }
+
+pre {
+  padding: 1em 1.6em 1em 1.2em;
+  vertical-align: top;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-width: 1px 1px 1px 6px;
+  margin: -0.5em 0 1.1em;
+  overflow-x: auto;
+}
+
+tt, code, span.type {
+  line-height: 1.5438em;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+
+  background: #f8f8ff;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding: 0 0.2em;
+}
+
+pre > tt, pre > code { border: none; line-height: 1em;}

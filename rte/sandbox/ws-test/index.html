@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style media="screen" type="text/css">
+
+html, body
+{
+    color: black;
+
+    font-family: "Consolas", monospace;
+    font-size: 12px;
+    white-space: pre;
+    
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+var self = { }
+
+var ws_proto = "ws://";
+if (document.location.protocol == "https:")
+    ws_proto = "wss://"
+self.socket = new WebSocket(ws_proto + document.location.host + "/ws-ssl-tester");
+
+function say_something()
+{
+    self.socket.send("HELLO WORLD!");
+}
+
+self.socket.onopen = function(evt)
+{
+//    self.socket.send("HELLO WORLD!");
+    setTimeout("say_something();", 1000);
+};
+
+self.socket.onmessage = function(evt)
+{
+    alert(evt.data);
+}
+
+
+</script>
+
+<title>WS-SSL-TEST</title>
+</head>
+<body><div id='content'></div>
+</body>
+</html>

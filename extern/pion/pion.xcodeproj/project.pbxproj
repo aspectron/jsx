@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2F1F57DAB5BDAB7AC3CDDD33 /* pion Support */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A2B8099C167778B53332431F /* Build configuration list for PBXAggregateTarget "pion Support" */;
+			buildPhases = (
+				2FC71839AB0FBCFF7A367718 /* Action "copy_config.hpp" */,
+			);
+			dependencies = (
+				F61AE25F49B1DCDAA30A151E /* PBXTargetDependency */,
+				778805DBFBEB726D4D2F5122 /* PBXTargetDependency */,
+			);
+			name = "pion Support";
+			productName = "pion Support";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0123CF7422ED885535EA398C /* http_message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A546C2D9196878892C254D76 /* http_message.cpp */; };
+		016B8EDBBA1A5A37955DD8EF /* http_basic_auth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4C9F1DAAAEBB44C87078833 /* http_basic_auth.cpp */; };
+		04DB665B4A3B987759EED1B7 /* scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFA40DC59CD7B30420692F75 /* scheduler.cpp */; };
+		17C5BCCADB6ED33E943654B6 /* spdy_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCF6004448D1FCCB96CDDBD /* spdy_parser.cpp */; };
+		1B164EA16A0DA747866CD9E3 /* http_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053A9F218D24C993B16103C0 /* http_types.cpp */; };
+		2CA04C2BED3C335F5897121C /* plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ADE3737407C1B95ADD96D /* plugin.cpp */; };
+		345C52A6CD9CDD6C813196D7 /* http_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9C9DEACF6EE5068A3DFE42 /* http_writer.cpp */; };
+		3C6B946050BD3848B45DA0C4 /* spdy_decompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54AC307C2FF5D5BF2714129 /* spdy_decompressor.cpp */; };
+		3EAFD3ADF52426879E61E5B7 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A665F640961BACC6C013C48 /* libcrypto.a */; };
+		51D26A8C9A13A90331CC920A /* http_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3CCC6ECDF96B0FD9192C1DB /* http_parser.cpp */; };
+		54CDF189DCB6440114B38BF7 /* tcp_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69665205B7F11C473D840A3E /* tcp_server.cpp */; };
+		574163B1CBFDE2632647F0B4 /* http_cookie_auth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F317D0671CBC18D1F08E44A /* http_cookie_auth.cpp */; };
+		5BBECF2A82F11CF1EB926009 /* http_plugin_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D146FA7A2EEF6A4256FDEBC6 /* http_plugin_server.cpp */; };
+		5E0D03011717DADE73D47AC0 /* process.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1368CAB9A3ADA145E8D248E /* process.cpp */; };
+		5E4C1CF5D46DFBBC1799CAD7 /* algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD1CECC010D190F221F5B49A /* algorithm.cpp */; };
+		64B81405BD5D79C8DD48F020 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB06001952BA6B954FC4C28D /* logger.cpp */; };
+		680430A99BBADF0DB6279918 /* http_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C11B85CDE42F4689D63D935B /* http_server.cpp */; };
+		A6EC6B8D12941236EB3B5E5A /* admin_rights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEB0152AC9AAA96AFB4AA223 /* admin_rights.cpp */; };
+		A733A74F1F1684F9683FEB2B /* http_auth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20FBB19E62621498D20FE477 /* http_auth.cpp */; };
+		DA014B7AC91F1E526927A227 /* tcp_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 760A44C1A406C453B3122637 /* tcp_timer.cpp */; };
+		DFA72D0466F05FE356094AB2 /* http_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2388C1D8002DDF1C3C494D39 /* http_reader.cpp */; };
+		FCBEFF91D2B479A80451D7F3 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9DA1EE3390249FB05CE2CE /* libssl.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		639BAD0E17E3382A67441198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACDD9327F83B54F088A7D263 /* extern.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8605074413384D308A00D2A5;
+			remoteInfo = openssl;
+		};
+		85130E56BAEDF0431CBC36A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACDD9327F83B54F088A7D263 /* extern.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8605074413384D308A00D2A5;
+			remoteInfo = openssl;
+		};
+		917E90F2E172C95DB0BB576E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACDD9327F83B54F088A7D263 /* extern.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FB8D27E57B64EC393493FBED;
+			remoteInfo = boost;
+		};
+		B44DFE43391D825AD5950A73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28BDDE9F0A0A493C8A4E2F85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F1F57DAB5BDAB7AC3CDDD33;
+			remoteInfo = "pion Support";
+		};
+		E7B0007B64F95642BC0807DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACDD9327F83B54F088A7D263 /* extern.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FB8D27E57B64EC393493FBED;
+			remoteInfo = boost;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002FA092873F03C5DF1D8C61 /* error.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = error.hpp; sourceTree = "<group>"; };
+		02050979805DEFE9D3437D95 /* libpion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		02D584DCA9ADE44E29058322 /* plugin_server.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = plugin_server.hpp; sourceTree = "<group>"; };
+		053A9F218D24C993B16103C0 /* http_types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_types.cpp; sourceTree = "<group>"; };
+		05B3AC46D6C557F3131F68C7 /* connection.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = connection.hpp; sourceTree = "<group>"; };
+		07DBB3EC1EA01F2FEB2E8253 /* response.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = response.hpp; sourceTree = "<group>"; };
+		103DC796B579E519E975FE62 /* types.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = types.hpp; sourceTree = "<group>"; };
+		13C4F65DD449A29A5047E93B /* process.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = process.hpp; sourceTree = "<group>"; };
+		142EDF761B25D2A5B1FEB2C0 /* scheduler.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = scheduler.hpp; sourceTree = "<group>"; };
+		1BBFDC7D8FA6E915F02ABB7C /* message.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = message.hpp; sourceTree = "<group>"; };
+		1D86573AFC1F8EA46EC3FCF1 /* auth.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = auth.hpp; sourceTree = "<group>"; };
+		1DBDA4084FE1910C35F1CD2A /* logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = logger.hpp; sourceTree = "<group>"; };
+		20DCA42B5FA2810CE1BF6792 /* common.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = common.gypi; path = ../../common.gypi; sourceTree = "<group>"; };
+		20FBB19E62621498D20FE477 /* http_auth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_auth.cpp; sourceTree = "<group>"; };
+		2388C1D8002DDF1C3C494D39 /* http_reader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_reader.cpp; sourceTree = "<group>"; };
+		2BD62FA209DD89EB3954E0E8 /* request.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = request.hpp; sourceTree = "<group>"; };
+		388DEF432FA599D798BF3759 /* cookie_auth.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = cookie_auth.hpp; sourceTree = "<group>"; };
+		427265667EF1443B435FEAA7 /* plugin_service.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = plugin_service.hpp; sourceTree = "<group>"; };
+		4E6ADE3737407C1B95ADD96D /* plugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = plugin.cpp; sourceTree = "<group>"; };
+		4F317D0671CBC18D1F08E44A /* http_cookie_auth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_cookie_auth.cpp; sourceTree = "<group>"; };
+		547B94CC5C36FD1AF17ED982 /* hash_map.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = hash_map.hpp; sourceTree = "<group>"; };
+		57072A3068637B08439F4DE3 /* plugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = plugin.hpp; sourceTree = "<group>"; };
+		59BAB8F85254BD5B35A606DC /* request_reader.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = request_reader.hpp; sourceTree = "<group>"; };
+		5CE9BCBEEBDBCEB4B449E78E /* pion.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = pion.gyp; sourceTree = "<group>"; };
+		61B391F159B526C90306760A /* types.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = types.hpp; sourceTree = "<group>"; };
+		69665205B7F11C473D840A3E /* tcp_server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_server.cpp; sourceTree = "<group>"; };
+		6A665F640961BACC6C013C48 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../libcrypto.a; sourceTree = "<group>"; };
+		75DD7084ABD532AB264EF6C2 /* basic_auth.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = basic_auth.hpp; sourceTree = "<group>"; };
+		760A44C1A406C453B3122637 /* tcp_timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_timer.cpp; sourceTree = "<group>"; };
+		780BB53830666C2D75087C6B /* algorithm.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = algorithm.hpp; sourceTree = "<group>"; };
+		79D6D85D47161A7FE875E754 /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.hpp; sourceTree = "<group>"; };
+		7A9C9DEACF6EE5068A3DFE42 /* http_writer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_writer.cpp; sourceTree = "<group>"; };
+		885C18F313B25D2F97DFCBC2 /* admin_rights.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = admin_rights.hpp; sourceTree = "<group>"; };
+		8F80FE7554EF4AE1EBD872ED /* reader.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = reader.hpp; sourceTree = "<group>"; };
+		95236377D1B605DE2A2B202C /* stream.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = stream.hpp; sourceTree = "<group>"; };
+		9F9DA1EE3390249FB05CE2CE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../libssl.a; sourceTree = "<group>"; };
+		A1368CAB9A3ADA145E8D248E /* process.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = process.cpp; sourceTree = "<group>"; };
+		A3CCC6ECDF96B0FD9192C1DB /* http_parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_parser.cpp; sourceTree = "<group>"; };
+		A546C2D9196878892C254D76 /* http_message.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_message.cpp; sourceTree = "<group>"; };
+		A5A85CBD213E097BD37E51DA /* parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = parser.hpp; sourceTree = "<group>"; };
+		AB06001952BA6B954FC4C28D /* logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
+		AC72B851FD7D7DDC50276879 /* request_writer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = request_writer.hpp; sourceTree = "<group>"; };
+		ACDD9327F83B54F088A7D263 /* extern.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = extern.xcodeproj; path = ../extern.xcodeproj; sourceTree = SOURCE_ROOT; };
+		AD32F9AFE457025820A80333 /* response_reader.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = response_reader.hpp; sourceTree = "<group>"; };
+		AFA40DC59CD7B30420692F75 /* scheduler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = scheduler.cpp; sourceTree = "<group>"; };
+		B62D48FF2C4B0127ADA85AF5 /* config.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.hpp; sourceTree = "<group>"; };
+		BFF3E6F338D69A2467A1B610 /* user.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = user.hpp; sourceTree = "<group>"; };
+		C11B85CDE42F4689D63D935B /* http_server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_server.cpp; sourceTree = "<group>"; };
+		C54AC307C2FF5D5BF2714129 /* spdy_decompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = spdy_decompressor.cpp; sourceTree = "<group>"; };
+		CCD79CEEC4D3E641BBEEEDC6 /* config.hpp.xcode */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.hpp.xcode; sourceTree = "<group>"; };
+		CD6D31567E4157B178DE1F0A /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.hpp; sourceTree = "<group>"; };
+		D146FA7A2EEF6A4256FDEBC6 /* http_plugin_server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_plugin_server.cpp; sourceTree = "<group>"; };
+		DD1CECC010D190F221F5B49A /* algorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = algorithm.cpp; sourceTree = "<group>"; };
+		DE96DBC0F1CF7691DE243042 /* writer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = writer.hpp; sourceTree = "<group>"; };
+		E450E2A5D91F4FD69B3B0974 /* timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = timer.hpp; sourceTree = "<group>"; };
+		E4C9F1DAAAEBB44C87078833 /* http_basic_auth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_basic_auth.cpp; sourceTree = "<group>"; };
+		E79CD7E6C198F03F3B0A94B5 /* plugin_manager.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = plugin_manager.hpp; sourceTree = "<group>"; };
+		EDCF6004448D1FCCB96CDDBD /* spdy_parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = spdy_parser.cpp; sourceTree = "<group>"; };
+		EDE0A0DA96404736B37AA08B /* parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = parser.hpp; sourceTree = "<group>"; };
+		EEB0152AC9AAA96AFB4AA223 /* admin_rights.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = admin_rights.cpp; sourceTree = "<group>"; };
+		F941893087C5B443A3037437 /* response_writer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = response_writer.hpp; sourceTree = "<group>"; };
+		FF5B4CDCF9E56A275200457B /* decompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = decompressor.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18CB24C2727DCC8BFD7DC2DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAFD3ADF52426879E61E5B7 /* libcrypto.a in Frameworks */,
+				FCBEFF91D2B479A80451D7F3 /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D1308010D4C8D0263E280A7 /* include/pion */ = {
+			isa = PBXGroup;
+			children = (
+				F0113C60C5A0A55793A01D9F /* http */,
+				B40E48F06CB72F5DBB1DC90C /* spdy */,
+				526507D63285949F0335802A /* tcp */,
+				885C18F313B25D2F97DFCBC2 /* admin_rights.hpp */,
+				780BB53830666C2D75087C6B /* algorithm.hpp */,
+				B62D48FF2C4B0127ADA85AF5 /* config.hpp */,
+				CCD79CEEC4D3E641BBEEEDC6 /* config.hpp.xcode */,
+				002FA092873F03C5DF1D8C61 /* error.hpp */,
+				547B94CC5C36FD1AF17ED982 /* hash_map.hpp */,
+				1DBDA4084FE1910C35F1CD2A /* logger.hpp */,
+				57072A3068637B08439F4DE3 /* plugin.hpp */,
+				E79CD7E6C198F03F3B0A94B5 /* plugin_manager.hpp */,
+				13C4F65DD449A29A5047E93B /* process.hpp */,
+				142EDF761B25D2A5B1FEB2C0 /* scheduler.hpp */,
+				BFF3E6F338D69A2467A1B610 /* user.hpp */,
+			);
+			path = include/pion;
+			sourceTree = "<group>";
+		};
+		526507D63285949F0335802A /* tcp */ = {
+			isa = PBXGroup;
+			children = (
+				05B3AC46D6C557F3131F68C7 /* connection.hpp */,
+				CD6D31567E4157B178DE1F0A /* server.hpp */,
+				95236377D1B605DE2A2B202C /* stream.hpp */,
+				E450E2A5D91F4FD69B3B0974 /* timer.hpp */,
+			);
+			path = tcp;
+			sourceTree = "<group>";
+		};
+		5A48DC99653A851559EF2B4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A665F640961BACC6C013C48 /* libcrypto.a */,
+				9F9DA1EE3390249FB05CE2CE /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6331441ACFAFAB36BA85BD4F /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				20DCA42B5FA2810CE1BF6792 /* common.gypi */,
+				5CE9BCBEEBDBCEB4B449E78E /* pion.gyp */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		76B8DCD1F361C547DCA79252 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				EEB0152AC9AAA96AFB4AA223 /* admin_rights.cpp */,
+				DD1CECC010D190F221F5B49A /* algorithm.cpp */,
+				20FBB19E62621498D20FE477 /* http_auth.cpp */,
+				E4C9F1DAAAEBB44C87078833 /* http_basic_auth.cpp */,
+				4F317D0671CBC18D1F08E44A /* http_cookie_auth.cpp */,
+				A546C2D9196878892C254D76 /* http_message.cpp */,
+				A3CCC6ECDF96B0FD9192C1DB /* http_parser.cpp */,
+				D146FA7A2EEF6A4256FDEBC6 /* http_plugin_server.cpp */,
+				2388C1D8002DDF1C3C494D39 /* http_reader.cpp */,
+				C11B85CDE42F4689D63D935B /* http_server.cpp */,
+				053A9F218D24C993B16103C0 /* http_types.cpp */,
+				7A9C9DEACF6EE5068A3DFE42 /* http_writer.cpp */,
+				AB06001952BA6B954FC4C28D /* logger.cpp */,
+				4E6ADE3737407C1B95ADD96D /* plugin.cpp */,
+				A1368CAB9A3ADA145E8D248E /* process.cpp */,
+				AFA40DC59CD7B30420692F75 /* scheduler.cpp */,
+				C54AC307C2FF5D5BF2714129 /* spdy_decompressor.cpp */,
+				EDCF6004448D1FCCB96CDDBD /* spdy_parser.cpp */,
+				69665205B7F11C473D840A3E /* tcp_server.cpp */,
+				760A44C1A406C453B3122637 /* tcp_timer.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		7BECE5489164FEF5AD768315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02050979805DEFE9D3437D95 /* libpion.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		864DA83C0D92E73AE31ED21C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4D1308010D4C8D0263E280A7 /* include/pion */,
+				76B8DCD1F361C547DCA79252 /* src */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		A536BCB02CABFA1856304B9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7323DF147B2D25D177A35C9 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				ACDD9327F83B54F088A7D263 /* extern.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		B40E48F06CB72F5DBB1DC90C /* spdy */ = {
+			isa = PBXGroup;
+			children = (
+				FF5B4CDCF9E56A275200457B /* decompressor.hpp */,
+				EDE0A0DA96404736B37AA08B /* parser.hpp */,
+				61B391F159B526C90306760A /* types.hpp */,
+			);
+			path = spdy;
+			sourceTree = "<group>";
+		};
+		BA6E72F8E040BBCFF60D94D0 = {
+			isa = PBXGroup;
+			children = (
+				864DA83C0D92E73AE31ED21C /* Source */,
+				A7323DF147B2D25D177A35C9 /* Projects */,
+				5A48DC99653A851559EF2B4C /* Frameworks */,
+				7BECE5489164FEF5AD768315 /* Products */,
+				6331441ACFAFAB36BA85BD4F /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		F0113C60C5A0A55793A01D9F /* http */ = {
+			isa = PBXGroup;
+			children = (
+				1D86573AFC1F8EA46EC3FCF1 /* auth.hpp */,
+				75DD7084ABD532AB264EF6C2 /* basic_auth.hpp */,
+				388DEF432FA599D798BF3759 /* cookie_auth.hpp */,
+				1BBFDC7D8FA6E915F02ABB7C /* message.hpp */,
+				A5A85CBD213E097BD37E51DA /* parser.hpp */,
+				02D584DCA9ADE44E29058322 /* plugin_server.hpp */,
+				427265667EF1443B435FEAA7 /* plugin_service.hpp */,
+				8F80FE7554EF4AE1EBD872ED /* reader.hpp */,
+				2BD62FA209DD89EB3954E0E8 /* request.hpp */,
+				59BAB8F85254BD5B35A606DC /* request_reader.hpp */,
+				AC72B851FD7D7DDC50276879 /* request_writer.hpp */,
+				07DBB3EC1EA01F2FEB2E8253 /* response.hpp */,
+				AD32F9AFE457025820A80333 /* response_reader.hpp */,
+				F941893087C5B443A3037437 /* response_writer.hpp */,
+				79D6D85D47161A7FE875E754 /* server.hpp */,
+				103DC796B579E519E975FE62 /* types.hpp */,
+				DE96DBC0F1CF7691DE243042 /* writer.hpp */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E84B76A15A98FDA1174586D /* pion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B84E91857F4AD2867B5DE7 /* Build configuration list for PBXNativeTarget "pion" */;
+			buildPhases = (
+				96563483F385C25DB2B485E4 /* Sources */,
+				18CB24C2727DCC8BFD7DC2DE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5828B992A251BE33CEF22D7C /* PBXTargetDependency */,
+				C7D72F911FEAB415434300FD /* PBXTargetDependency */,
+				125A2F717ACEF5589E74646A /* PBXTargetDependency */,
+			);
+			name = pion;
+			productName = pion;
+			productReference = 02050979805DEFE9D3437D95 /* libpion.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28BDDE9F0A0A493C8A4E2F85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = DF12220205DC600C201489B6 /* Build configuration list for PBXProject "pion" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = BA6E72F8E040BBCFF60D94D0;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A536BCB02CABFA1856304B9B /* Products */;
+					ProjectRef = ACDD9327F83B54F088A7D263 /* extern.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				7E84B76A15A98FDA1174586D /* pion */,
+				2F1F57DAB5BDAB7AC3CDDD33 /* pion Support */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FC71839AB0FBCFF7A367718 /* Action "copy_config.hpp" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				include/pion/config.hpp.xcode,
+			);
+			name = "Action \"copy_config.hpp\"";
+			outputPaths = (
+				include/pion/config.hpp,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo note: \"Copy config.hpp\"\nexec cp include/pion/config.hpp.xcode include/pion/config.hpp\nexit 1\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96563483F385C25DB2B485E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6EC6B8D12941236EB3B5E5A /* admin_rights.cpp in Sources */,
+				5E4C1CF5D46DFBBC1799CAD7 /* algorithm.cpp in Sources */,
+				A733A74F1F1684F9683FEB2B /* http_auth.cpp in Sources */,
+				016B8EDBBA1A5A37955DD8EF /* http_basic_auth.cpp in Sources */,
+				574163B1CBFDE2632647F0B4 /* http_cookie_auth.cpp in Sources */,
+				0123CF7422ED885535EA398C /* http_message.cpp in Sources */,
+				51D26A8C9A13A90331CC920A /* http_parser.cpp in Sources */,
+				5BBECF2A82F11CF1EB926009 /* http_plugin_server.cpp in Sources */,
+				DFA72D0466F05FE356094AB2 /* http_reader.cpp in Sources */,
+				680430A99BBADF0DB6279918 /* http_server.cpp in Sources */,
+				1B164EA16A0DA747866CD9E3 /* http_types.cpp in Sources */,
+				345C52A6CD9CDD6C813196D7 /* http_writer.cpp in Sources */,
+				64B81405BD5D79C8DD48F020 /* logger.cpp in Sources */,
+				2CA04C2BED3C335F5897121C /* plugin.cpp in Sources */,
+				5E0D03011717DADE73D47AC0 /* process.cpp in Sources */,
+				04DB665B4A3B987759EED1B7 /* scheduler.cpp in Sources */,
+				3C6B946050BD3848B45DA0C4 /* spdy_decompressor.cpp in Sources */,
+				17C5BCCADB6ED33E943654B6 /* spdy_parser.cpp in Sources */,
+				54CDF189DCB6440114B38BF7 /* tcp_server.cpp in Sources */,
+				DA014B7AC91F1E526927A227 /* tcp_timer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		125A2F717ACEF5589E74646A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openssl;
+			targetProxy = 639BAD0E17E3382A67441198 /* PBXContainerItemProxy */;
+		};
+		5828B992A251BE33CEF22D7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F1F57DAB5BDAB7AC3CDDD33 /* pion Support */;
+			targetProxy = B44DFE43391D825AD5950A73 /* PBXContainerItemProxy */;
+		};
+		778805DBFBEB726D4D2F5122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openssl;
+			targetProxy = 85130E56BAEDF0431CBC36A6 /* PBXContainerItemProxy */;
+		};
+		C7D72F911FEAB415434300FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = boost;
+			targetProxy = E7B0007B64F95642BC0807DC /* PBXContainerItemProxy */;
+		};
+		F61AE25F49B1DCDAA30A151E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = boost;
+			targetProxy = 917E90F2E172C95DB0BB576E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AE66E4ED728BA4AB9239FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Debug;
+		};
+		31D484A533767A68A617D801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "pion Support";
+			};
+			name = Release;
+		};
+		335B7526E24BE35EBE834AE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "pion Support";
+			};
+			name = Debug;
+		};
+		6DEE4EB2BCE3646C4477108A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PION_STATIC_LINKING,
+					DEBUG,
+					_DEBUG,
+				);
+				HEADER_SEARCH_PATHS = (
+					include,
+					../boost,
+					../openssl/include,
+					../zlib,
+				);
+				LD_DYLIB_INSTALL_NAME = "@executable_path/$EXECUTABLE_NAME";
+				LIBRARY_SEARCH_PATHS = (
+					..,
+					../boost/stage/lib,
+					../openssl/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-std=c++11",
+				);
+				PRODUCT_NAME = pion;
+				SYMROOT = /Users/pm/dev/jsx/bin;
+			};
+			name = Debug;
+		};
+		DABF316CF5EFA44B1CBBDA8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PION_STATIC_LINKING,
+					NDEBUG,
+				);
+				HEADER_SEARCH_PATHS = (
+					include,
+					../boost,
+					../openssl/include,
+					../zlib,
+				);
+				LD_DYLIB_INSTALL_NAME = "@executable_path/$EXECUTABLE_NAME";
+				LIBRARY_SEARCH_PATHS = (
+					..,
+					../boost/stage/lib,
+					../openssl/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-std=c++11",
+				);
+				PRODUCT_NAME = pion;
+				SYMROOT = /Users/pm/dev/jsx/bin;
+			};
+			name = Release;
+		};
+		DBBE3A264B9F5E3F2FAD2B71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B84E91857F4AD2867B5DE7 /* Build configuration list for PBXNativeTarget "pion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DABF316CF5EFA44B1CBBDA8C /* Release */,
+				6DEE4EB2BCE3646C4477108A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		A2B8099C167778B53332431F /* Build configuration list for PBXAggregateTarget "pion Support" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31D484A533767A68A617D801 /* Release */,
+				335B7526E24BE35EBE834AE1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		DF12220205DC600C201489B6 /* Build configuration list for PBXProject "pion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBBE3A264B9F5E3F2FAD2B71 /* Release */,
+				0AE66E4ED728BA4AB9239FC8 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28BDDE9F0A0A493C8A4E2F85 /* Project object */;
+}

@@ -1,0 +1,1 @@
+..\..\..\build\tools\gyp\gyp --depth=. -d all pion.gyp

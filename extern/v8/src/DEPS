@@ -1,0 +1,11 @@
+include_rules = [
+  "+src",
+  "-src/libplatform",
+  "-include/libplatform",
+]
+
+specific_include_rules = {
+  "(mksnapshot|d8)\.cc": [
+    "+include/libplatform/libplatform.h",
+  ],
+}

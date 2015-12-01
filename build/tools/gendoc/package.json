@@ -1,0 +1,12 @@
+{
+  "name": "gendoc",
+  "description": "Yet another documentation generator from source code comments",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "repository": "git://github.com/aspectron/gendoc.git",
+  "homepage": "https://github.com/aspectron/gendoc",
+  "bugs": { "url": "https://github.com/aspectron/gendoc/issues" },
+  "license": "MIT",
+  "keywords": ["documentation", "generator", "markdown", "html"],
+  "tags": ["documentation", "generator", "markdown", "html"],
+}
