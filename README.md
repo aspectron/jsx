@@ -1,6 +1,6 @@
-# HARMONY JSX
+# JSX
 
-HARMONY JSX is a C++ library which allows to use JavaScript in a C++ application. It based on [V8 JavaScript engine](https://code.google.com/p/v8/) and supports [CommonJS](http://en.wikipedia.org/wiki/CommonJS) conformant modules.
+JSX is a C++ library which allows to use JavaScript in a C++ application. It based on [V8 JavaScript engine](https://code.google.com/p/v8/) and supports [CommonJS](http://en.wikipedia.org/wiki/CommonJS) conformant modules.
 
 
 ## Prerequisites
